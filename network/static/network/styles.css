@@ -1,0 +1,31 @@
+a:hover {
+    text-decoration: none;
+}
+
+textarea {
+    resize: none;
+    display: block;
+}
+
+.p-username > .post-edit, .post-like-count > .post-like {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+    font-size: 0.8rem;
+}
+
+.a-username {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: transparent;
+}
+
+.post-timestamp, .post-like-count {
+    color: rgba(0,0,0,.5);
+    font-size: 0.8rem;
+}
+
+.p-username, .post-text, .post-timestamp {
+    margin-bottom: 8px;
+}

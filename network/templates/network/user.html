@@ -1,0 +1,15 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+    <div class="container" id="all-posts-view">
+        This is {{ username }} page !
+        Number of users followed: {{ followed_users }}
+        Number of followers: {{ followers }}
+        <h3>{{ username }} posts</h3>
+        {% for post in user_posts %}
+            {{ post.text }}
+        {% endfor %}
+    </div>
+{% endblock %}

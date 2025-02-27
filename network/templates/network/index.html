@@ -1,0 +1,29 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+{% block script %}
+    <script src="{% static 'network/index.js' %}"></script>
+{% endblock %}
+
+{% block body %}
+
+    {% if user.is_authenticated %}
+        {% load crispy_forms_tags %}
+        <div class="container" id="new-post-view" hidden="hidden">
+
+            <h3>New Post</h3>
+            <form id="new-post-form">
+                {% csrf_token %}
+                {{ form.post_text|as_crispy_field }}
+                <input type="submit" class="btn btn-primary" value="Post">
+            </form>
+        </div>
+    {% endif %}
+
+    <div class="container" id="user-view" hidden="hidden">
+    </div>
+
+    <div class="container" id="all-posts-view">
+    </div>
+{% endblock %}
+
